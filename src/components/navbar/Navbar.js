@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <nav id="navbar">
     <a href="#intro-section">
-      <img src="img/logo.png" alt="The Last Chapter" className="logo"
+      <img src="bookstore-react/img/logo.png" alt="The Last Chapter" className="logo"
     /></a>
     <ul className="nav-menu">
       <li className="item">
