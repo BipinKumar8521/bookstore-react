@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function IntroSection() {
   return (
@@ -18,9 +18,9 @@ export default function IntroSection() {
               in, take a browse through our shelves, and get lost in a world of
               literature at The Last Chapter.
             </p>
-            <button className="btn" onclick="location.href='#Our-Recommendations';">
+          <a href="#Our-Recommendations">  <button className="btn">
               Discover
-            </button>
+            </button></a>
           </div>
         </div>
       </section>

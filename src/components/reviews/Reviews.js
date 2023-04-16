@@ -1,8 +1,18 @@
 import React from 'react'
 import SingleReview from './SingleReview'
-
 export default function Reviews() {
-
+  // var swiper = (".mySwiper", {
+  //   effect: "flip",
+  //   grabCursor: true,
+  //   pagination: {
+  //     el: ".swiper-pagination",
+  //   },
+  //   navigation: {
+  //     nextEl: ".swiper-button-next",
+  //     prevEl: ".swiper-button-prev",
+  //   },
+  // });
+  
 
 
   return (
@@ -14,7 +24,7 @@ export default function Reviews() {
 
                          {/* user 1 review */}
               <SingleReview
-              userimg="bookstore-react/img/user1.jpg"
+              userimg="/bookstore-react/img/user1.jpg"
               username="Ava Elizabeth Wilson"
               reviewmsg="This is my go-to bookstore for all my reading needs!
               The website is easy to navigate and has a wide selection
@@ -26,7 +36,7 @@ export default function Reviews() {
               />
                          {/* user 2 review */}
               <SingleReview
-              userimg="bookstore-react/img/user3.jpg"
+              userimg="/bookstore-react/img/user3.jpg"
               username="Alexander Joseph Kim"
               reviewmsg="I stumbled upon this bookstore website while searching
               for a specific book, and I am glad I did! The website
@@ -39,7 +49,7 @@ export default function Reviews() {
               />
                          {/* user 3 review */}
               <SingleReview
-              userimg="bookstore-react/img/user2.jfif"
+              userimg="/bookstore-react/img/user2.jfif"
               username="Sophia Isabella Thomas"
               reviewmsg="I had a fantastic experience shopping on this bookstore
               website. The website is user-friendly, and the search
@@ -53,7 +63,7 @@ export default function Reviews() {
               />
                          {/* user 4 review */}
               <SingleReview
-              userimg="bookstore-react/img/user4.jfif"
+              userimg="/bookstore-react/img/user4.jfif"
               username="Noah Matthew Lee"
               reviewmsg="I am an avid reader and have shopped at many online
               bookstores, but this one stands out from the rest. The

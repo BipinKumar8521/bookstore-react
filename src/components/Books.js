@@ -1,6 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Books({imgsrc, title, author}) {
+  const[addbtn, setAddbtn] = useState("Add+")
+  const[added, setAdded]= useState(false)
+  const addbtnfn =()=> {
+        if (addbtn==="Add+") {
+          setAddbtn("Added")
+          setAdded(true)
+        } else {
+          setAddbtn("Add+")
+          setAdded(false)
+        }
+      }
   return (
       <div className="grid-item">
             <div className="card">
@@ -20,7 +31,7 @@ export default function Books({imgsrc, title, author}) {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
                 labore voluptatibus, suscipit voluptatum commodi doloribus
               </p>
-              <button className="card-btn">Add+</button>
+              <button className={added? "card-btn active" : "card-btn"} onClick={addbtnfn}>{addbtn}</button>
             </div>
           </div>
   )

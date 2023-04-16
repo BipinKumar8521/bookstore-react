@@ -12,19 +12,7 @@
   body::-webkit-scrollbar {
     display: none;
   }
-  #navbar {
-    display: flex;
-    min-height: 60px;
-    align-items: center;
-    background-color: rgba(0, 0, 0);
-    justify-content: space-between;
-    position: fixed;
-    padding: 0 24px;
-    width: 100%;
-    font-family: "Gloock", serif;
-    z-index: 10;
-  }
-  
+
   .search {
     height: 3rem;
     width: 50%;
@@ -60,48 +48,8 @@
     width: 100%;
     height: 100%;
   }
-  .logo {
-    height: 45px;
-    /* margin: 9px 9px; */
-  }
-  #navbar ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* gap: 11px; */
-    text-align: center;
-    padding: 10px;
-  }
-  #navbar ul li {
-    list-style: none;
-    font-size: 20px;
-  }
-  #navbar ul li a {
-    display: block;
-    padding: 3px 15px;
-    border-radius: 20px;
-    color: white;
-  }
-  #navbar ul li a:hover {
-    color: black;
-    background-color: white;
-  }
-  #navbar ul li a:active {
-    color: red;
-  }
-  .hamburger {
-    display: none;
-    cursor: pointer;
-  }
-  .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: white;
-  }
+
+
   #intro-section {
     background-image: url(../public/img/background.jpg);
     height: 511px;
@@ -523,36 +471,6 @@
   }
   
   @media (max-width: 868px) {
-    .hamburger {
-      display: block;
-    }
-    .hamburger.active .bar:nth-child(2) {
-      opacity: 0;
-    }
-    .hamburger.active .bar:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-    }
-    .nav-menu {
-      position: fixed;
-      left: -100%;
-      top: 60px;
-      gap: 0;
-      flex-direction: column;
-      background-color: #000000;
-      width: 100%;
-      text-align: center;
-      transition: 0.3s;
-    }
-    .item {
-      margin: 0;
-      padding: 0;
-    }
-    .nav-menu.active {
-      left: 0;
-    }
     .intro {
       margin: 0;
       padding-top: 80px;
