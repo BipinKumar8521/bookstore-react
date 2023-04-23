@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function SingleReview({userimg, username, reviewmsg}) {
+export default function SingleReview({userimg, username, reviewmsg, index}) {
   return (
     <div className="swiper-slide">
     <div className="reviews">

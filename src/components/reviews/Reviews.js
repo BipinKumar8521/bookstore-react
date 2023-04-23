@@ -1,29 +1,31 @@
-import React from 'react'
-import SingleReview from './SingleReview'
-export default function Reviews() {
-  // var swiper = (".mySwiper", {
-  //   effect: "flip",
-  //   grabCursor: true,
-  //   pagination: {
-  //     el: ".swiper-pagination",
-  //   },
-  //   navigation: {
-  //     nextEl: ".swiper-button-next",
-  //     prevEl: ".swiper-button-prev",
-  //   },
-  // });
-  
+// import Swiper core and required modules
+import { Navigation, Pagination, A11y } from 'swiper';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import SingleReview from './SingleReview';
+
+export default () => {
   return (
     <section id="Review-Section">
-        <h1 className="heading">Review Section</h1>
-        <div className="review">
-          <div className="swiper mySwiper">
-            <div className="swiper-wrapper">
-
-                         {/* user 1 review */}
-              <SingleReview
+    <h1 className="heading">Review Section</h1>
+    <div className="review">
+    <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination, A11y]}
+      spaceBetween={0}
+      slidesPerView={1}
+      navigation
+      pagination={{ clickable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+    >
+      <SwiperSlide> <SingleReview
               userimg="/bookstore-react/img/user1.jpg"
               username="Ava Elizabeth Wilson"
               reviewmsg="This is my go-to bookstore for all my reading needs!
@@ -33,9 +35,8 @@ export default function Reviews() {
               helps me make an informed decision before purchasing.
               The delivery is always prompt, and the packaging is
               excellent. Highly recommended! "
-              />
-                         {/* user 2 review */}
-              <SingleReview
+              /> </SwiperSlide>
+      <SwiperSlide>  <SingleReview
               userimg="/bookstore-react/img/user3.jpg"
               username="Alexander Joseph Kim"
               reviewmsg="I stumbled upon this bookstore website while searching
@@ -46,9 +47,8 @@ export default function Reviews() {
               received the book within a few days, and it was in
               perfect condition. I will definitely be coming back to
               this website for my future book purchases! "
-              />
-                         {/* user 3 review */}
-              <SingleReview
+              /> </SwiperSlide>
+      <SwiperSlide> <SingleReview
               userimg="/bookstore-react/img/user2.jfif"
               username="Sophia Isabella Thomas"
               reviewmsg="I had a fantastic experience shopping on this bookstore
@@ -60,9 +60,8 @@ export default function Reviews() {
               informed decision. I highly recommend this website to
               anyone looking for a hassle-free book shopping
               experience!"
-              />
-                         {/* user 4 review */}
-              <SingleReview
+              /> </SwiperSlide>
+      <SwiperSlide> <SingleReview
               userimg="/bookstore-react/img/user4.jfif"
               username="Noah Matthew Lee"
               reviewmsg="I am an avid reader and have shopped at many online
@@ -74,14 +73,9 @@ export default function Reviews() {
               packaged well, and the delivery is always on time. I
               have recommended this website to my fellow bookworms,
               and they have all been satisfied with their purchases."
-              />
-
-            </div>
-            <div className="swiper-button-next"></div>
-            <div className="swiper-button-prev"></div>
-            <div className="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-  )
-}
+              /> </SwiperSlide>
+    </Swiper>
+    </div>
+    </section>
+  );
+};
